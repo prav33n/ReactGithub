@@ -1,0 +1,29 @@
+.contributerCard {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    padding: 10px;
+    min-width: 300px;
+    max-width: 400px;
+    background: lightskyblue;
+    border-radius: 10px;
+}
+
+.contributerImage {
+    border-radius: 100%;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.contributerInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20px;
+    align-items: flex-start;
+}
+
+.contributerInfoText {
+    font-size: 18px;
+    font-style: normal;
+}

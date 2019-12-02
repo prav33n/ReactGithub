@@ -1,0 +1,47 @@
+.repoDetailsContainer,
+.repositoryContainer {
+    width: 50%;
+    background: #ffffff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.repoTileContainer { 
+    background: lightsalmon;
+}
+.repoContentContainer {  
+    margin-top: 10px;
+}
+.repoHeader {
+    font-size: 18px;
+    font-style: bold;
+    width: 33%;
+    text-align: left;
+}
+
+.repoDetails {
+    display: flex;
+    flex-direction: row;
+}   
+
+.repoDetailsContainer {
+    width: 50%;
+    margin-left: 20px;
+}
+
+.repoTitle  {
+    font-size: 20px;
+    font-style: bold;
+}
+
+@media only screen and (max-width: 600px) {
+    .repoDetails {
+        flex-direction: column;
+    }
+    .repoDetailsContainer,
+    .repositoryContainer {
+        width: 80%;
+    }
+}
