@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 The project fethces all public github information and loads the list of repositotries , click on individual repository to see contributor details.
+The data is fetched from github REST API v4.
+
 Semi responsive design. 
 App URL - https://futurice.herokuapp.com/
 
