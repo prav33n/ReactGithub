@@ -7,6 +7,7 @@ import { RepoDetails } from './components/RepoDetails';
 function App() {
   return (
     <div className="App">
+      <h2 className="appTitle">Dashboard Futurice</h2>
       <Organization/>
       <div className="repoDetails">
         <Repositories/>
