@@ -6,18 +6,18 @@ import RepoCard from './RepoCard';
 import Api from '../api/Api';
 import './Repositories.css';
 
-export const Repositories =  () => {
+export const Repositories =  (props) => {
     const [loading, setLoading ] = React.useState(false);
     const [ repositories, setRepositories ] = React.useState([]);
-    
+    const { companyName } = props;
 
     const getRepositories = async () => {
         setLoading(true);
-        setRepositories(await Api.getRepositories('futurice'));
+        setRepositories(await Api.getRepositories(companyName));
         setLoading(false);
     };
 
-    React.useEffect(() => {getRepositories();}, []);
+    React.useEffect(() => {getRepositories();}, [companyName]);
     return(
         <>
             { loading && 'Loading Animation'}
@@ -31,7 +31,7 @@ export const Repositories =  () => {
                     <div className={"repoContentContainer"}>
                     { repositories.map((repository, index) => {
                         const { name, html_url, language, decription } = repository;
-                        return <RepoCard name = {name} language={language} url={html_url} decription={decription} key={index} />
+                        return <RepoCard name = {name} language={language} url={html_url} decription={decription} key={index} companyName={companyName}/>
                         }
                     )}
                     </div>

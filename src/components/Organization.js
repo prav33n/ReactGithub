@@ -13,18 +13,18 @@ const getInfoCard = (number, text) => {
         </div>
     );
 }
-export const Organization =  () => {
+export const Organization =  (props) => {
     const [loading, setLoading ] = React.useState(false);
     const [ orgInfo, setOrgInfo] = React.useState({});
-    
+    const {companyName} = props;
 
     const getOrgInfo = async () => {
         setLoading(true);
-        setOrgInfo(await Api.getOrgInfo('futurice'));
+        setOrgInfo(await Api.getOrgInfo(companyName));
         setLoading(false);
     };
 
-    React.useEffect(() => {getOrgInfo();}, []);
+    React.useEffect(() => {getOrgInfo();}, [companyName]);
 
     const { public_repos, followers, following, html_url  } = orgInfo;
     return(
